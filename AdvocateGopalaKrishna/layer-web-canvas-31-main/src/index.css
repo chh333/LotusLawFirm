@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 218 23% 11%;
+    --foreground: 36 45% 90%;
+
+    --card: 220 23% 15%;
+    --card-foreground: 36 45% 90%;
+
+    --popover: 220 23% 15%;
+    --popover-foreground: 36 45% 90%;
+
+    --primary: 43 49% 58%;
+    --primary-foreground: 218 23% 11%;
+
+    --secondary: 220 15% 25%;
+    --secondary-foreground: 36 45% 90%;
+
+    --muted: 220 15% 25%;
+    --muted-foreground: 36 20% 70%;
+
+    --accent: 43 49% 58%;
+    --accent-foreground: 218 23% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 43 49% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 218 23% 11%;
+    --sidebar-foreground: 36 45% 90%;
+    --sidebar-primary: 43 49% 58%;
+    --sidebar-primary-foreground: 218 23% 11%;
+    --sidebar-accent: 220 15% 25%;
+    --sidebar-accent-foreground: 36 45% 90%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 43 49% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(10, 15, 28, 0.9) 0%, rgba(26, 35, 50, 0.8) 100%);
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
